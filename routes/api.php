@@ -25,8 +25,6 @@ Route::prefix('categories')->group(function() {
 	// Category Content
 	Route::put('content/create', 'CategoriesController@create_category_content');
 	Route::get('content/read', 'CategoriesController@read_category_content');
-	Route::post('content/update', 'CategoriesController@update_category_content');
-	Route::delete('content/delete', 'CategoriesController@delete_category_content');
 	Route::get('content/get', 'CategoriesController@get_category_content');
 
 	// User Category
@@ -41,14 +39,12 @@ Route::prefix('comments')->group(function() {
 	// Content Comments
 	Route::put('create', 'CommentsController@create_comment');
 	Route::get('read', 'CommentsController@read_comment');
-	Route::post('update', 'CommentsController@update_comment');
 	Route::delete('delete', 'CommentsController@delete_comment');
 	Route::get('get', 'CommentsController@get_comments');
 
 	// Comment Replies
 	Route::put('replies/create', 'CommentsController@create_comment_reply');
 	Route::get('replies/read', 'CommentsController@read_comment_reply');
-	Route::post('replies/update', 'CommentsController@update_comment_reply');
 	Route::delete('replies/delete', 'CommentsController@delete_comment_reply');
 	Route::get('replies/get', 'CommentsController@get_comment_replies');
 });
